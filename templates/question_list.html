@@ -1,0 +1,12 @@
+<h2>Lista de Questões</h2>
+
+<ul>
+{% for question in questions %}
+    <li>
+        {{ question.title }} 
+        {% if question.answered_by_user %}
+            - (Já respondida)
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
